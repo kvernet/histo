@@ -1,5 +1,5 @@
 #include "MHisto2D.h"
-#include "header.h"
+#include "histo_header.h"
 
 MHisto2D::MHisto2D(const double& xMin, const double& xMax, 
 		const long& nx, const double& yMin, const double& yMax, const long& ny) : 

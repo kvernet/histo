@@ -1,5 +1,5 @@
 #include "MHisto1D.h"
-#include "header.h"
+#include "histo_header.h"
 
 MHisto1D::MHisto1D(const double& xMin, const double& xMax, const long& nx) : 
 			m_xMin(xMin), m_xMax(xMax), m_nx(nx), m_sum(0), m_sum2(0), m_entries(0) {

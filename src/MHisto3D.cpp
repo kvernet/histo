@@ -1,5 +1,5 @@
 #include "MHisto3D.h"
-#include "header.h"
+#include "histo_header.h"
 
 MHisto3D::MHisto3D(const double& xMin, const double& xMax, 
 		const long& nx, const double& yMin, const double& yMax, const long& ny, 
