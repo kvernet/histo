@@ -20,11 +20,14 @@ MHisto3D::MHisto3D(const double& xMin, const double& xMax,
 	// define sum sum2 tables
 	m_sum  = new double[m_entries];
 	m_sum2 = new double[m_entries];
+	for(long i = 0; i < m_entries; i++) {
+		m_sum[i] = m_sum2[i] = 0;
+	}
 }
 MHisto3D::~MHisto3D() {
 	// free memory
-	delete m_sum;
-	delete m_sum2;
+	delete[] m_sum;
+	delete[] m_sum2;
 }
 long MHisto3D::GetXBin(const double& x) const {
 	long bin = floor((x - m_xMin) / m_xdelta);

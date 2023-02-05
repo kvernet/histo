@@ -17,11 +17,13 @@ MHisto2D::MHisto2D(const double& xMin, const double& xMax,
 	// define sum sum2 tables
 	m_sum  = new double[m_entries];
 	m_sum2 = new double[m_entries];
+	for(long i = 0; i < m_entries; i++) {
+		m_sum[i] = m_sum2[i] = 0;
+	}
 }
 MHisto2D::~MHisto2D() {
-	// free memory
-	delete m_sum;
-	delete m_sum2;
+	delete[] m_sum;
+	delete[] m_sum2;
 }
 long MHisto2D::GetXBin(const double& x) const {
 	long bin = std::floor((x - m_xMin) / m_xdelta);
